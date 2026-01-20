@@ -103,7 +103,7 @@ with st.sidebar:
                 # Extract text from all PDFs
                 all_texts = []
                 for file in uploaded_files:
-                    text = extract_text_from_pdf(file)
+                    text,error = extract_text_from_pdf(file)
                     all_texts.append(text[0])
                 
                 # Split texts into chunks
